@@ -10,7 +10,7 @@ $game_id = $_POST["game_id"];       // รหัสเกมเดิมที�
 $game_name = $_POST["game_name"];   // ชื่อเกมใหม่
 $game_pice = $_POST["game_pice"];   // ราคาใหม่
 $game_cover = $_POST["game_cover"]; // ภาพปกใหม่
-$typr_id = $_POST["typr_id"];       // รหัสประเภทเกมใหม่
+$type_id = $_POST["type_id"];       // รหัสประเภทเกมใหม่
 
 // ดึงไฟล์เชื่อมต่อฐานข้อมูล
 include 'connect.php';
@@ -21,7 +21,7 @@ include 'connect.php';
     `game_name`='$game_name',
     `game_pice`='$game_pice',
     `game_cover`='$game_cover',
-    `typr_id`='$typr_id' 
+    `type_id`='$type_id' 
     WHERE game_id = '$game_id'
     ";
 

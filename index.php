@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="style.php" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameStore | หน้าหลัก</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <header class="site-header">
+        <div class="site-header-top">
+            <a href="index.php" class="site-logo">
+                <span class="site-logo-icon">🎮</span>
+                <span class="site-logo-text">GameStore</span>
+            </a>
+            <nav class="site-nav-top">
+                <a href="index.php" class="current">หน้าหลัก</a>
+                <a href="manage_game.php">จัดการเกม</a>
+                <a href="add_game.php">เพิ่มเกม</a>
+                <a href="game_type.php">ประเภทเกม</a>
+            </nav>
+        </div>
+        <div class="site-header-bottom">
+            <nav class="site-nav-bottom">
+                <a href="index.php" class="current">รายการเกม <span class="chevron">▾</span></a>
+                <a href="manage_game.php">จัดการข้อมูล <span class="chevron">▾</span></a>
+                <a href="game_type.php">หมวดหมู่ <span class="chevron">▾</span></a>
+            </nav>
+            <div class="site-search">
+                <input type="text" placeholder="ค้นหาเกมในร้าน...">
+            </div>
+        </div>
+    </header>
+
+    <h1>รายการเกมทั้งหมด</h1>
 
     <?php
     //แสดง error
@@ -57,7 +83,7 @@ ini_set('display_startup_errors', 1);
                                  >
                         </td>
                             
-                        <td><?= $game["typr_id"] ?> </td>   
+                        <td><?= $game["type_id"] ?> </td>   
                     </tr>
                     <?php
 
